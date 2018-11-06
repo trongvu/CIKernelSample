@@ -14,6 +14,7 @@
 		0BB4AB8A219140240054A1FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB4AB88219140240054A1FE /* LaunchScreen.storyboard */; };
 		0BB4AB92219140E70054A1FE /* kernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4AB91219140E70054A1FE /* kernel.metal */; };
 		0BB4AB94219141930054A1FE /* MetalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4AB93219141930054A1FE /* MetalFilter.swift */; };
+		0BE578122191F1F300FF650B /* kernel.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = 0BE578112191F1F300FF650B /* kernel.cikernel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0BB4AB8B219140240054A1FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BB4AB91219140E70054A1FE /* kernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = kernel.metal; path = CIKernelSample/kernel.metal; sourceTree = "<group>"; };
 		0BB4AB93219141930054A1FE /* MetalFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalFilter.swift; sourceTree = "<group>"; };
+		0BE578112191F1F300FF650B /* kernel.cikernel */ = {isa = PBXFileReference; lastKnownFileType = text; name = kernel.cikernel; path = CIKernelSample/kernel.cikernel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		0BB4AB73219140220054A1FE = {
 			isa = PBXGroup;
 			children = (
+				0BE578112191F1F300FF650B /* kernel.cikernel */,
 				0BB4AB91219140E70054A1FE /* kernel.metal */,
 				0BB4AB7E219140220054A1FE /* CIKernelSample */,
 				0BB4AB7D219140220054A1FE /* Products */,
@@ -131,6 +134,7 @@
 				0BB4AB8A219140240054A1FE /* LaunchScreen.storyboard in Resources */,
 				0BB4AB87219140240054A1FE /* Assets.xcassets in Resources */,
 				0BB4AB85219140220054A1FE /* Main.storyboard in Resources */,
+				0BE578122191F1F300FF650B /* kernel.cikernel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXCS377B4N;
 				INFOPLIST_FILE = CIKernelSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXCS377B4N;
 				INFOPLIST_FILE = CIKernelSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,4 @@
+kernel vec4 myColor(__sample pixel){
+    vec4 twistedColor = pixel.gbra;
+    return twistedColor;
+}

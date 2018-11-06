@@ -13,12 +13,23 @@ class MetalFilter: CIFilter {
     
     private let kernel: CIColorKernel
     
+    private lazy var hazeRemovalKernel: CIColorKernel? = {
+        
+        return kernel
+    }()
     var inputImage: CIImage?
     
     override init() {
-        let url = Bundle.main.url(forResource: "default", withExtension: "metallib")!
-        let data = try! Data(contentsOf: url)
-        kernel = try! CIColorKernel(functionName: "myColor", fromMetalLibraryData: data)
+        if #available(iOS 11.0, *) {
+            let url = Bundle.main.url(forResource: "default", withExtension: "metallib")!
+            let data = try! Data(contentsOf: url)
+            kernel = try! CIColorKernel(functionName: "myColor", fromMetalLibraryData: data)
+        } else {
+            // Fallback on earlier versions
+            guard let path = Bundle.main.path(forResource: "kernel", ofType: "cikernel"),
+                let code = try? String(contentsOfFile: path) else { fatalError("Failed to load HazeRemove.cikernel from bundle") }
+            kernel = CIColorKernel(source: code)!
+        }
         super.init()
     }
     
